@@ -7,7 +7,7 @@ spring:
     name: comments-service
   data:
     mongodb:
-      host: 192.168.19.121
+      host: 192.168.1.6
       database: leyoudb
   datasource:
     url: jdbc:mysql://127.0.0.1:3306/leyou?characterEncoding=UTF-8&useSSL=false
@@ -18,11 +18,11 @@ spring:
       minimum-idle: 10
   rabbitmq:
     virtual-host: /leyou
-    username: /leyou
+    username: leyou
     password: leyou
-    host: 192.168.19.121
+    host: 192.168.1.6
   redis:
-    host: 192.168.19.121
+    host: 192.168.1.6
   jackson:
     default-property-inclusion: non_null # 配置json处理时忽略空值
 eureka:
@@ -49,4 +49,4 @@ leyou:
     dataCenterId: 2
   jwt:
     cookieName: LY_TOKEN
-    pubKeyPath: G:\\tmp\\rsa\\rsa.pub # 公钥地址
+    pubKeyPath: D:\\rsa\\rsa.pub # 公钥地址
