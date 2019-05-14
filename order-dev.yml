@@ -11,15 +11,15 @@ spring:
       maximum-pool-size: 200
       minimum-idle: 100
   rabbitmq:
-    host: 192.168.19.121
-    username: /leyou
+    host: 192.168.1.6
+    username: leyou
     password: leyou
     virtual-host: /leyou
     template:
       queue: leyou.order.delay.queue
     publisher-confirms: true
   redis:
-    host: 192.168.19.121
+    host: 192.168.1.6
 eureka:
   client:
     service-url:
@@ -56,10 +56,10 @@ leyou:
     dataCenterId: 1
   jwt:
     cookieName: LY_TOKEN
-    pubKeyPath: G:\\tmp\\rsa\\rsa.pub # 公钥地址
+    pubKeyPath: D:\\rsa\\rsa.pub # 公钥地址
   pay:
-    appId: wx8397f8696b538317
-    mchId: 1473426802
-    key: T6m9iK73b0kn9g5v426MKfHQH7X8rKwb
+    appId: wx4ccf18a63c2ad662
+    mchId: 1508723181
+    key: ca8487eca6f966e8aad839663e857c7c
     connectTimeoutMs: 5000
     readTimeoutMs: 10000
