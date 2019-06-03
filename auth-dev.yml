@@ -45,5 +45,4 @@ hystrix:
             timeoutInMillisecond: 10000 # 熔断超时时长：10000ms  
   threadpool:
     default:
-      coreSize: 1000
-      maxQueueSize：10000
+      coreSize: 1000      
