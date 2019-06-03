@@ -44,9 +44,16 @@ hystrix:
   command:
     default:
       execution:
+        timeout: 
+          enabled: true
         isolation:
           thread:
-            timeoutInMillisecond: 60000 # 熔断超时时长：10000ms
+            timeoutInMillisecond: 10000 # 熔断超时时长：10000ms            
+      circuitBreaker：
+        requestVolumeThreshold：1000
+  threadpool:
+    default:
+      coreSize: 100
 leyou:
   jwt:
     cookieName: LY_TOKEN
