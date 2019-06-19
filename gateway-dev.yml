@@ -7,7 +7,7 @@ spring:
     virtual-host: /leyou
     username: leyou
     password: leyou
-    host: 172.16.50.213
+    host: 172.18.19.222
 eureka:
   client:
     service-url:
@@ -55,7 +55,7 @@ hystrix:
 leyou:
   jwt:
     cookieName: LY_TOKEN
-    pubKeyPath: D:\\rsa\\rsa.pub # 公钥地址
+    pubKeyPath: /home/leyou/rsa/rsa.pub # 公钥地址
   filter:
     allowPaths:
        /api/auth
