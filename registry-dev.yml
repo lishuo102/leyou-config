@@ -9,15 +9,14 @@ spring:
     password: leyou
     host: 172.18.19.222
 eureka:
+  server:
+    enable-self-preservation: false  #关闭自我保护
+    eviction-interval-timer-in-ms: 5000 #每隔5秒进行一次服务列表清理
   client:
     fetch-registry: false
     register-with-eureka: false
     serviceUrl:
       defaultZone: http://172.18.19.222:10086/eureka
-  server:
-    enable-self-preservation: false  #关闭自我保护
-    eviction-interval-timer-in-ms: 5000 #每隔5秒进行一次服务列表清理
-
 ribbon:
   ConnectTimeout: 60000 # 连接超时时间(ms)
   ReadTimeout: 60000 # 通信超时时间(ms)
