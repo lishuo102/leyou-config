@@ -30,10 +30,10 @@ eureka:
   client:
     service-url:
       defaultZone: http://172.18.19.222:10086/eureka
-      registry-fetch-interval-seconds: 5
+    registry-fetch-interval-seconds: 5
   instance:
     prefer-ip-address: true  #当你获取host时，返回的不是主机名，而是ip
-    instance-id: ${spring.cloud.client.ip-address}:${server.port}    
+    instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${server.port}    
     #ip-address: 127.0.0.1
     lease-renewal-interval-in-seconds: 5
     lease-expiration-duration-in-seconds: 15
