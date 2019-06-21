@@ -12,6 +12,10 @@ spring:
     hikari:
       maximum-pool-size: 20
       minimum-idle: 10
+  cloud:
+    loadbalancer:
+      retry:
+        enabled: true # 开启Spring Cloud的重试功能
   redis:
     host: 172.18.19.222
   rabbitmq:
@@ -43,6 +47,7 @@ ribbon:
   OkToRetryOnAllOperations: true # 是否对所有操作重试
   MaxAutoRetriesNextServer: 1 # 同一服务不同实例的重试次数
   MaxAutoRetries: 1 # 同一实例的重试次数
+  NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
 hystrix:
   command:
     default:
