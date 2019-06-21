@@ -11,11 +11,7 @@ spring:
     password: 123456
     hikari:
       maximum-pool-size: 20
-      minimum-idle: 10
-  cloud:
-    loadbalancer:
-      retry:
-        enabled: true # 开启Spring Cloud的重试功能
+      minimum-idle: 10 
   redis:
     host: 172.18.19.222
   rabbitmq:
