@@ -42,7 +42,7 @@ hystrix:
           enabled: true
         isolation:          
           thread:
-            timeoutInMillisecond: 10000 # 熔断超时时长：10000ms          
+            timeoutInMillisecond: 12000 # 熔断超时时长：10000ms          
   threadpool:
     default:
       coreSize: 1000      
