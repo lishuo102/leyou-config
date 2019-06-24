@@ -55,7 +55,7 @@ hystrix:
             timeoutInMillisecond: 30000 # 熔断超时时长：10000ms           
   threadpool:
     default:
-      coreSize: 10000  
+      coreSize: 1000  
       maxQueueSize: 200 ##BlockingQueue的最大队列数
       queueSizeRejectionThreshold: 50 ##即使maxQueueSize没有达到，达到queueSizeRejectionThreshold该值后，请求也会被拒绝
 leyou:
