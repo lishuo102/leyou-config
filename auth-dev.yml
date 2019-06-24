@@ -37,15 +37,15 @@ ribbon:
 hystrix:
   command:
     default:
-      execution:
-        timeout: 
-          enabled: true
+      execution:       
         isolation: 
           strategy: THREAD
           semaphore:
             maxConcurrentRequests: 1000
           thread:
-            timeoutInMillisecond: 30000 # 熔断超时时长：10000ms          
+            timeoutInMillisecond: 120000 # 熔断超时时长：10000ms          
+      circuitBreaker:
+        sleepWindowInMilliseconds:  5000
   threadpool:
     default:
       coreSize: 500    
