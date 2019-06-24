@@ -34,12 +34,12 @@ zuul:
     - upload-service # 忽略upload-service服务
   add-host-header: true #携带请求本身的head头信息
   sensitive-headers: #匹配禁止使用的头信息，这里设置为null，否则set-cookie无效 host: 
-  connect-timeout-millis: 10000
-  socket-timeout-millis: 60000
+  connect-timeout-millis: 100000
+  socket-timeout-millis: 600000
   
 ribbon:
-  ConnectTimeout: 60000 # 连接超时时间(ms)
-  ReadTimeout: 60000 # 通信超时时间(ms)
+  ConnectTimeout: 120000 # 连接超时时间(ms)
+  ReadTimeout: 120000 # 通信超时时间(ms)
   OkToRetryOnAllOperations: true # 是否对所有操作重试
   MaxAutoRetriesNextServer: 1 # 同一服务不同实例的重试次数
   MaxAutoRetries: 1 # 同一实例的重试次数
