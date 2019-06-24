@@ -50,9 +50,9 @@ hystrix:
         isolation:
           strategy: SEMAPHORE
           thread:
-            timeoutInMillisecond: 10000 # 熔断超时时长：10000ms  
+            timeoutInMillisecond: 12000 # 熔断超时时长：10000ms  
           semaphore:
-            maxConcurrentRequests: 1000
+            maxConcurrentRequests: 10000
   threadpool:
     default:
       coreSize: 10000      
