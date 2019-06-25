@@ -36,7 +36,8 @@ zuul:
   sensitive-headers: #匹配禁止使用的头信息，这里设置为null，否则set-cookie无效 host: 
   connect-timeout-millis: 100000
   socket-timeout-millis: 600000
-  
+  semaphore:
+    max-semaphores: 200  
 ribbon:
   ConnectTimeout: 120000 # 连接超时时间(ms)
   ReadTimeout: 120000 # 通信超时时间(ms)
@@ -49,7 +50,9 @@ hystrix:
     default:
       execution:        
         isolation:
-          strategy: THREAD         
+          strategy: THREAD
+          semaphore:
+            maxConcurrentRequests: 100000
           thread:
             timeoutInMillisecond: 120000 # 熔断超时时长：10000ms 
         timeout: 
