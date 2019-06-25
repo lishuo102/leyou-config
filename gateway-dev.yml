@@ -36,8 +36,13 @@ zuul:
   sensitive-headers: #匹配禁止使用的头信息，这里设置为null，否则set-cookie无效 host: 
   connect-timeout-millis: 100000
   socket-timeout-millis: 600000
+  ribbonIsolationStrategy: THREAD
   semaphore:
-    max-semaphores: 200  
+    max-semaphores: 200
+  eureka:
+    <commandKey>:
+      semaphore:
+        max-semaphores: 200 # 默认值
 ribbon:
   ConnectTimeout: 120000 # 连接超时时间(ms)
   ReadTimeout: 120000 # 通信超时时间(ms)
