@@ -33,6 +33,8 @@ hystrix:
           enabled: true
         isolation:
           strategy: THREAD
+          semaphore:
+            maxConcurrentRequests: 100000  
           thread:
             timeoutInMillisecond: 120000 # 熔断超时时长：10000ms        
   threadpool:
